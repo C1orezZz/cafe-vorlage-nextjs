@@ -93,14 +93,14 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Features Grid - Minimal */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-20"
-        >
-          {features.map((feature, index) => (
+                 <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6, delay: 0.3 }}
+           className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-20"
+         >
+           {features.map((feature) => (
             <div key={feature.title} className="text-center">
               <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="h-8 w-8 text-white" />

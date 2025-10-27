@@ -61,7 +61,7 @@ export default function ContactPage() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {contactMethods.map((method, index) => (
+          {contactMethods.map((method) => (
             <div key={method.label} className="bg-white rounded-xl p-6 border border-gray-200 text-center hover:border-rose-300 transition-colors">
               <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <method.icon className="h-6 w-6 text-white" />

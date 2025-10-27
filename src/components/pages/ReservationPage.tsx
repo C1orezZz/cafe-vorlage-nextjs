@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Calendar, Clock, Users, Mail, Phone, Sparkles, Check, ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Calendar, Clock, Users, Mail, Sparkles, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import Link from 'next/link'
 
 const timeSlots = [
   '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30',
@@ -127,9 +128,9 @@ export default function ReservationPage() {
             >
               Neue Reservierung
             </Button>
-            <a href="/" className="inline-block px-8 py-3 border-2 border-gray-900 rounded-lg font-bold hover:bg-gray-50">
+            <Link href="/" className="inline-block px-8 py-3 border-2 border-gray-900 rounded-lg font-bold hover:bg-gray-50">
               Zur Startseite
-            </a>
+            </Link>
           </div>
         </div>
       </div>
