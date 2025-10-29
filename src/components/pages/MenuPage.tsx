@@ -74,7 +74,7 @@ const colorClasses = {
 
 export default function MenuPage() {
   return (
-    <div className="min-h-screen bg-gray-50 pt-20 pb-32">
+    <div className="min-h-screen bg-gray-50 pb-32">
       {/* Minimalist Header */}
       <div className="max-w-5xl mx-auto px-6 pt-16 pb-8">
         <motion.div
@@ -87,7 +87,7 @@ export default function MenuPage() {
             <Sparkles className="h-5 w-5 text-rose-500" />
             <span className="text-sm font-bold text-gray-500 uppercase tracking-widest">Unsere Speisekarte</span>
           </div>
-          <h1 className="text-6xl sm:text-8xl font-black text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-gray-900 mb-4 leading-tight break-words">
             Köstlichkeiten
           </h1>
           <p className="text-lg text-gray-500 max-w-xl mx-auto">

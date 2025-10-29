@@ -35,7 +35,7 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="min-h-screen bg-gray-50">
       {/* Centered Header */}
       <div className="max-w-2xl mx-auto px-6 pt-20 pb-16 text-center">
         <motion.div

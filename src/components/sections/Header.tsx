@@ -24,8 +24,8 @@ export default function Header() {
       
       {/* Main header */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-pink-100/50">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex h-20 items-center justify-between">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="relative flex h-20 items-center">
             {/* Logo - positioned diagonally */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative transform -rotate-12 group-hover:rotate-12 transition-transform duration-300">
@@ -67,7 +67,10 @@ export default function Header() {
             {/* Mobile menu button */}
             <button
               type="button"
-              className="lg:hidden rounded-lg p-2 text-gray-700 hover:bg-pink-50"
+              className="lg:hidden rounded-lg p-2 text-gray-700 hover:bg-pink-50 absolute right-5"
+              aria-label="Menü öffnen"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu-panel"
               onClick={() => setMobileMenuOpen(true)}
             >
               <Menu className="h-6 w-6" />
@@ -80,7 +83,12 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden">
           <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl">
+          <div
+            id="mobile-menu-panel"
+            role="dialog"
+            aria-modal="true"
+            className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl"
+          >
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-rose-400 to-purple-400 rounded-xl flex items-center justify-center">
@@ -91,6 +99,7 @@ export default function Header() {
               <button
                 type="button"
                 className="rounded-lg p-2 text-gray-700 hover:bg-pink-50"
+                aria-label="Menü schließen"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <X className="h-6 w-6" />

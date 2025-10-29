@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --background: 340 25% 98%;
@@ -28,6 +28,12 @@
   --chart-4: 280 50% 60%;
   --chart-5: 260 45% 60%;
   --radius: 1rem;
+}
+
+/* Ensure media scales within containers on mobile */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .dark {
@@ -64,6 +70,14 @@
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  overflow-x: hidden;
+}
+
+/* Verhindert Positionssprünge durch ein-/ausblendende Scrollbalken */
+html {
+  /* Reserviert Platz für die Scrollbar (verhindert horizontale Verschiebung) */
+  scrollbar-gutter: stable both-edges;
+  overflow-y: scroll;
 }
 
 /* Romantic cafe-specific styles */

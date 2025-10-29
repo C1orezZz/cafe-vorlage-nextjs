@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-purple-50 pt-10 sm:pt-4">
       {/* Floating decorative elements */}
       <motion.div
         animate={{ 
@@ -155,9 +155,9 @@ export default function Hero() {
                   </div>
                   
                   {/* Tag */}
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-xl border-4 border-rose-200">
-                    <p className="text-center text-rose-600 font-black text-xl">Rosentraum Latte</p>
-                    <p className="text-center text-purple-600 font-bold">€6,90</p>
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-8 py-4 rounded-full shadow-xl border-4 border-rose-200">
+                    <p className="text-center text-rose-600 font-black text-xl leading-tight">Rosentraum Latte</p>
+                    <p className="text-center text-purple-600 font-bold leading-tight">€6,90</p>
                   </div>
                 </div>
               </div>
@@ -182,8 +182,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom wave decoration */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      {/* Bottom wave decoration - behind content */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-0"></div>
     </section>
   )
 }

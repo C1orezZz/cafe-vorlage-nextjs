@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -30,7 +31,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1">
+          <main className="flex-1 pt-20">
             {children}
           </main>
           <Footer />

@@ -12,7 +12,7 @@ const features = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* Full Width Hero Image */}
       <div className="relative h-[400px] bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
